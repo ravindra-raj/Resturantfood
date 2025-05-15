@@ -1,0 +1,410 @@
+.menu-container {
+  /* padding: 0px 2%; */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  /* height: 80vh; */
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8b0000;
+  margin-bottom: 40px;
+}
+
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.menu-card {
+  background: #fdfdfd;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+.menu-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-card h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.menu-card p {
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.menu-card button {
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-card button:hover {
+  background-color: #a30000;
+}
+
+@media (max-width: 768px) {
+  .menu-card {
+    width: 100%;
+  }
+}
+/* Backdrop for the confirmation modal */
+/* ======= General Modal Overlay ======= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* ======= Main Modal Box ======= */
+.modal-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* ======= Order Section ======= */
+.order-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.order-section label,
+.order-section input,
+.order-section select {
+  font-size: 16px;
+}
+
+.order-section select,
+.order-section input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ======= Item Cards ======= */
+.modal-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.modal-card {
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-card:hover {
+  background-color: #eaeaea;
+}
+
+.modal-card.selected {
+  border-color: #28a745;
+  background-color: #dff0d8;
+}
+
+/* ======= Quantity Dropdown ======= */
+.modal-card select {
+  margin-top: 8px;
+  padding: 4px;
+  font-size: 14px;
+}
+
+/* ======= Selected Items Preview ======= */
+.selected-preview {
+  margin-bottom: 20px;
+}
+
+.selected-preview h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #444;
+}
+
+.selected-preview ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.selected-preview li {
+  font-size: 15px;
+  color: #333;
+}
+
+/* ======= Action Buttons ======= */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.order-btn,
+.close-btn,
+.confirm-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.order-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.order-btn:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.close-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* ======= Confirmation Modal Overlay ======= */
+.confirm-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+/* ======= Confirmation Box ======= */
+.confirm-box {
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.confirm-box h3 {
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 22px;
+  text-align: center;
+}
+
+.confirm-box p,
+.confirm-box ul {
+  font-size: 16px;
+  color: #555;
+  margin: 4px 0;
+  text-align: left;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.confirm-btn {
+  background-color: #6fef8b;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: orange;
+}
+
+.cancel-btn {
+  background-color: rgb(242, 95, 95);
+  color: black;
+}
+
+.cancel-btn:hover {
+  background-color: #ed1729;
+}
+
+.success-modal,
+.confirm-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-box,
+.confirm-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.success-box h3 {
+  color: green;
+  margin-bottom: 15px;
+}
+
+.success-box button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: none;
+  background: #008000;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* ======= Carousel Container Styling ======= */
+.carousel-container {
+  margin: 40px auto;
+  width: 80%;
+  max-width: 1000px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ======= Carousel Image Styling ======= */
+.carousel-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-img:hover {
+  transform: scale(1.02);
+}
+
+/* ======= Responsive Carousel ======= */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 180px;
+  }
+}
+
+/* ======= Menu Card Adjustments ======= */
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.menu-card {
+  background: #fdfdfd;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Fix for image inside card */
+.menu-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Responsive menu card */
+@media (max-width: 768px) {
+  .menu-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+

@@ -1,0 +1,102 @@
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 91.5vh;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Overlay Content */
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.home-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-overlay p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  background-color: #ffcc00;
+  padding: 12px 24px;
+  border: none;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.home-btn:hover {
+  background-color: #e6b800;
+}
+
+.contact-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.contact-btn:hover {
+  background-color: white;
+  color: #8b0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-overlay h1 {
+    font-size: 2rem;
+    
+  }
+
+  .home-overlay p {
+    font-size: 1rem;
+margin-right: 25px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-overlay p {
+    font-size: 0.9rem;
+  }
+}
